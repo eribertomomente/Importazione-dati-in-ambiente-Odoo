@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<record id="synchronizer_json_form_inherit" model="ir.ui.view">
+			<field name="name">Synchronizer_json.form.inherit</field>
+			<field name="model">synchronizer</field>
+			<field name="inherit_id" ref="synchronizer-main.synchronizer_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[@name='example']" position="inside">
+                    <div>
+                        <br />
+                        <h2>Format JSON data example</h2>
+                        <br />
+
+    					{"model": "res.partner",<br />
+                        --"data": [{<br />
+                        --------"id": "123",<br />
+                        --------"name": "Partner_A",<br />
+                        --------"invoice_warn": "no-message",<br />
+                        --------"notify_email": "always",<br />
+                        --------"own_lot_counting": "1",<br />
+                        --------"res_partner_bank_ids": {<br />
+                        ------------"model": "res.partner.bank",<br />
+                        ------------"data": [{<br />
+                        --------------------"id": "456",<br />
+                        --------------------"acc_number": "789",<br />
+                        --------------------"state": "bank"<br />
+                        ----------------}]<br />
+                        ------------}<br />
+                        --------}]<br />
+                        }
+                        <br />
+                    </div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>
+
+
+
+
+						

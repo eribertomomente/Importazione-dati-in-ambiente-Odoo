@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="synchronizer_xml_form_inherit" model="ir.ui.view">
+            <field name="name">Synchronizer_xml.form.inherit</field>
+            <field name="model">synchronizer</field>
+            <field name="inherit_id" ref="synchronizer-main.synchronizer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='example']" position="inside">
+                    <div>
+                        <br />
+                        <h2>Format XML data example</h2>
+                        <br />
+
+                        &lt;root&gt;<br />
+                        ----&lt;model&gt;res.partner&lt;/model&gt;<br />
+                        ----&lt;data&gt;<br />
+                        --------&lt;item&gt;<br />
+                        ------------&lt;element name="id"&gt;123&lt;/element&gt;<br />
+                        ------------&lt;element name="name"&gt;Partner_A&lt;/element&gt;<br />
+                        ------------&lt;element name="invoice_warn"&gt;no-message&lt;/element&gt;<br />
+                        ------------&lt;element name="notify_email"&gt;always&lt;/element&gt;<br />
+                        ------------&lt;element name="own_lot_counting"&gt;1&lt;/element&gt;<br />
+                        ------------&lt;element name="res_partner_bank_ids"&gt;<br />
+                        ----------------&lt;model&gt;res.partner.bank&lt;/model&gt;<br />
+                        ----------------&lt;data&gt;<br />
+                        --------------------&lt;item&gt;<br />
+                        ------------------------&lt;element name="id"&gt;456&lt;/element&gt;<br />
+                        ------------------------&lt;element name="acc_number"&gt;789&lt;/element&gt;<br />
+                        ------------------------&lt;element name="state"&gt;bank&lt;/element&gt;<br />
+                        --------------------&lt;/item&gt;<br />
+                        ----------------&lt;/data&gt;<br />
+                        ------------&lt;/element&gt;<br />
+                        --------&lt;/item&gt;<br />
+                        ----&lt;/data&gt;<br />
+                        &lt;/root&gt;<br />
+                        <br />
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

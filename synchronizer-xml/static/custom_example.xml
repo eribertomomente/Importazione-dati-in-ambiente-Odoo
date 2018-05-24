@@ -1,0 +1,47 @@
+<root>
+	<model>res.partner</model>
+	<data>
+		<item>
+			<element name="id">111</element>
+			<element name="name">Pippo</element>
+			<element name="invoice_warn">no-message</element>
+			<element name="notify_email">always</element>
+			<element name="own_lot_counting">1</element>
+		</item>
+		<item>
+			<element name="id">112</element>
+			<element name="name">Pippo2</element>
+			<element name="invoice_warn">no-message</element>
+			<element name="notify_email">always</element>
+			<element name="own_lot_counting">1</element>
+			<element name="res_partner_bank_ids">
+				<model>res.partner.bank</model>
+				<data>
+					<item>
+						<element name="id">121</element>
+						<element name="acc_number">ERIBERTO121</element>
+						<element name="state">bank</element>
+					</item>
+					<item>
+						<element name="id">122</element>
+						<element name="acc_number">ERIBERTO122</element>
+						<element name="state">bank</element>
+						<element name="res_bank_ids">
+							<model>res.bank</model>
+							<data>
+								<item>
+									<element name="id">211</element>
+									<element name="name">Banca 211</element>
+								</item>
+								<item>
+									<element name="id">212</element>
+									<element name="name">Banca212</element>
+								</item>
+							</data>
+						</element>
+					</item>
+				</data>
+			</element>
+		</item>
+	</data>
+</root>

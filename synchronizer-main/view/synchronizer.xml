@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="synchronizer assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/synchronizer-main/static/src/css/synchronizer.css"/>
+            </xpath>
+        </template>
+
+        <record id="synchronizer_form" model="ir.ui.view">
+            <field name="name">Synchronizer.form</field>
+            <field name="model">synchronizer</field>
+            <field name="arch" type="xml">
+                <form string="Synchronizer">
+                    <h1 class="oe_horizontal_separator oe_clear ">
+                        Synchronizer Settings
+                    </h1>
+                    <table style="width:64%">
+                        <tr>
+                            <td>
+                                <h2 class="oe_horizontal_separator oe_clear" style="font-size:100%;">Synchronizer parametres</h2>
+                                <group>
+                                    <field name="name" />
+                                    <field name="src" string="URL or file:// to be searched in TMP folder" />
+                                    <field name="src_params" />
+                                    <field name="model_hierarchy" readonly="True"/>
+                                    <field name="create_date" invisible="True"/>
+                                    <field name="source_type"/>
+                                </group>
+                            </td>
+                            <td>
+                                <h2 class="oe_horizontal_separator oe_clear" style="font-size:100%;">Basic Authentication</h2>
+                                <group>
+                                    <field name="basic_auth_username" />
+                                    <field name="basic_auth_password" />
+                                </group>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h2 class="oe_horizontal_separator oe_clear" style="font-size:100%;">Cron</h2>
+                                <group >
+                                    <field name="cron_id"  style="width:32%"  attrs="{'invisible': [('create_date','=',False)]}"  /> 
+                                </group>
+                            </td>
+                            <td>
+                                <h2 class="oe_horizontal_separator oe_clear" style="font-size:100%;">Optionas</h2>
+                                <group>
+                                    <field name="optional_header" style="width:100%"/>
+                                </group>
+                            </td>
+                        </tr>
+
+                    </table>
+                    <table style="width:64%" attrs="{'invisible': [('create_date','=',False)]}">
+                        <tr>
+                            <td>
+                                <button string="Synchronize" name="sync" class="oe_highlight" type="object" />
+                            </td>
+                            <td>
+                                <button string="Nuke" name="nuke" class="oe_highlight" type="object" 
+                                confirm="Are you sure you want to delete recursively all the data imported?"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <div name="example" class="sync-container">
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="synchronizer_tree" model="ir.ui.view">
+            <field name="name">Synchronizer.tree</field>
+            <field name="model">synchronizer</field>
+            <field name="arch" type="xml">
+                <tree string="Synchronizer">
+                    <field name="name" />
+                    <field name="src" />
+                    <field name="src_params" />
+                    <field name="basic_auth_username"/>
+                    <field name="basic_auth_password" />
+                    <field name="source_type" />
+                    <field name="cron_id"  />
+                    <field name="record_properties" />
+                </tree>
+            </field> 
+        </record>
+
+
+
+    </data>
+</openerp>

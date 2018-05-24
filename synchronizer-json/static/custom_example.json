@@ -1,0 +1,48 @@
+{
+	"model": "res.partner",
+	"data": [{
+			"id": "111",
+			"name": "Pippo",
+			"invoice_warn": "no-message",
+			"notify_email": "always",
+			"own_lot_counting": "1"
+		},
+		{
+			"id": "112",
+			"name": "Pippo2",
+			"invoice_warn": "no-message",
+			"notify_email": "always",
+			"own_lot_counting": "1",
+			"res_partner_bank_ids": {
+				"model": "res.partner.bank",
+				"data": [{
+						"id": "121",
+						"acc_number": "ERIBERTO121",
+						"state": "bank"
+					},
+					{
+						"id": "122",
+						"acc_number": "ERIBERTO122",
+						"state": "bank",
+						"res_bank_ids": {
+							"model": "res.bank",
+							"data": [{
+									"id": "211",
+									"name": "Banca 211"
+								},
+								{
+									"id": "212",
+									"name": "Banca 212"
+								}
+							]
+
+
+						}
+
+					}
+				]
+
+			}
+		}
+	]
+}

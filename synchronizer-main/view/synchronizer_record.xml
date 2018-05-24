@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="synchronizer_record_form" model="ir.ui.view">
+            <field name="name">Synchronizer.record.form</field>
+            <field name="model">synchronizer_record</field>
+            <field name="arch" type="xml">
+                <form string="Synchronizer">
+                    <div class="oe_horizontal_separator oe_clear ">
+                        Synchronizer Record
+                    </div>
+                    <group>
+                        <field name="synchronizer_id"/>
+                        <field name="odoo_model" readonly="True"/>
+                        <field name="odoo_id" readonly="True"/>
+                        <field name="ext_id" readonly="True"/>
+                        <field name="creation_date" readonly="True"/>
+                        <field name="sync_date" readonly="True"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="synchronizer_record_tree" model="ir.ui.view">
+            <field name="name">Synchronizer.record.tree</field>
+            <field name="model">synchronizer_record</field>
+            <field name="arch" type="xml">
+                <tree string="Synchronizer Record">
+                    <field name="synchronizer_id"/>
+                    <field name="odoo_model" readonly="True"/>
+                    <field name="odoo_id" readonly="True"/>
+                    <field name="ext_id" readonly="True"/>
+                    <field name="creation_date" readonly="True"/>
+                    <field name="sync_date" readonly="True"/>
+                </tree>
+            </field> 
+        </record>
+
+    </data>
+</openerp>

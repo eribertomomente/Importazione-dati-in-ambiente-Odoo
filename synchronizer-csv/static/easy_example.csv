@@ -1,0 +1,4 @@
+model,id,name,invoice_warn,notify_email,own_lot_counting
+res.partner,111,Pippo,no-message,always,1
+res.partner,112,Pippo2,no-message,always,1
+res.partner,113,Pippo3,no-message,always,1

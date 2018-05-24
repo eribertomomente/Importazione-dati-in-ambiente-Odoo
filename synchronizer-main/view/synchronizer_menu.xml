@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	    <record id="synchronizer_action" model="ir.actions.act_window">
+            <field name="name">Synchronizer</field>
+            <field name="res_model">synchronizer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="synchronizer_tree"/>
+	        <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a Sync.
+              </p>
+            </field>
+        </record>
+
+        <record id="synchronizer_record_action" model="ir.actions.act_window">
+	        <field name="name">Synchronizer Record</field>
+	        <field name="res_model">synchronizer_record</field>
+	        <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="synchronizer_record_tree"/>
+	        <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="synchronizer_menu" name="Synchronizer" parent="base.menu_config" sequence="30"/>
+
+        <menuitem id="synchronizer_params_menu" name="Sync Settings" parent="synchronizer_menu" sequence="25" action="synchronizer_action"/>
+        <menuitem id="synchronizer_record_menu" name="Sync Record" parent="synchronizer_menu" sequence="30" action="synchronizer_record_action"/>
+    </data>
+</openerp>

@@ -1,0 +1,9 @@
+.sync-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 10px;
+	padding: 10px;
+}
+.sync-container > div {
+	color: rgba(124, 123, 173, 1);
+}

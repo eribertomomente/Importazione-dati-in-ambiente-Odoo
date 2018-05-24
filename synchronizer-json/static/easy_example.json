@@ -1,0 +1,13 @@
+{ 
+    "model":"ir.filters", 
+    "data": [     
+                {"id":"113","context":"{}", "domain":"[]", "model_id":"account.analytic.account", "name":"Filtro Test 3", "____": {
+                	"model": "res.partner.bank",
+                	"data": [ {	"id":"1234", "acc_number":"ERIBERTO1234", "state":"bank"}]
+
+                	}
+
+
+                 }
+            ] 
+}

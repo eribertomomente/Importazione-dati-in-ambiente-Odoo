@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="synchronizer_csv_form_inherit" model="ir.ui.view">
+            <field name="name">Synchronizer_csv.form.inherit</field>
+            <field name="model">synchronizer</field>
+            <field name="inherit_id" ref="synchronizer-main.synchronizer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='example']" position="inside">
+                    <div>
+                        <br />
+                        <h2>Format CSV data example</h2>
+                        <br />
+                            model,id;name,invoice_warn,notify_email,own_lot_counting<br />
+                            res.partner,111,Pippo,no-message,always,1<br />
+                            res.partner,112,Pippo2,no-message,always,1<br />
+                            res.partner,113,Pippo3,no-message,always,1<br />
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
